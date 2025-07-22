@@ -14,11 +14,11 @@ export default function Navbar() {
           </a>
         </Col>
         <Col>
-          <Menu mode="horizontal" selectable={false} style={{ borderBottom: 'none', background: 'transparent' }}>
-            <Menu.Item key="home">
-              <a href="#" style={{ fontWeight: 600, fontSize: 18, color: '#1890ff' }}>Home</a>
-            </Menu.Item>
-          </Menu>
+          <nav style={{ display: 'flex', gap: 32 }}>
+            <a href="#" style={{ fontWeight: 600, fontSize: 18, color: '#1890ff', textDecoration: 'none' }}>Home</a>
+            <a href="#about" style={{ fontWeight: 600, fontSize: 18, color: '#1890ff', textDecoration: 'none' }}>About</a>
+            <a href="#contact" style={{ fontWeight: 600, fontSize: 18, color: '#1890ff', textDecoration: 'none' }}>Contact</a>
+          </nav>
         </Col>
       </Row>
     </Header>

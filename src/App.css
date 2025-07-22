@@ -108,6 +108,7 @@ img[alt="Luka Logo"] {
   border-radius: 0 0 32px 32px;
   box-shadow: 0 4px 32px #1890ff11;
   margin-bottom: 48px;
+  margin-left: 40px;
 }
 
 /* Section Block Styles */
@@ -124,6 +125,7 @@ img[alt="Luka Logo"] {
   .hero-section {
     padding: 32px 0 24px 0;
     border-radius: 0 0 16px 16px;
+    margin-left: 10px;
   }
   .section-block {
     padding: 24px 0 16px 0;
@@ -200,5 +202,45 @@ img[alt="Luka Logo"] {
 
 /* Add vertical spacing between sections */
 .section-spacer {
-  height: 48px;
+  height: 8px;
+}
+
+/* Add horizontal margin to all sections except header/navbar */
+.section-block {
+  margin-left: 80px;
+  margin-right: 80px;
+}
+@media (max-width: 768px) {
+  .section-block {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+/* Center all section headings */
+.section-block .ant-typography,
+.section-block .ant-typography h1,
+.section-block .ant-typography h2,
+.section-block .ant-typography h3,
+.section-block .ant-typography h4,
+.section-block .ant-typography h5,
+.section-block .ant-divider-inner-text {
+  text-align: center !important;
+  justify-content: center;
+}
+
+/* Center Divider headings in sections */
+.section-block .ant-divider-inner-text {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.section-block {
+  margin-bottom: 8px;
+}
+@media (max-width: 768px) {
+  .section-block {
+    margin-bottom: 4px;
+  }
 }

@@ -1,5 +1,5 @@
 import { Layout, Typography, Row, Col, Card, List, Divider, Button, Steps, Tag } from 'antd';
-import { CheckCircleTwoTone, SafetyCertificateTwoTone, ApiTwoTone, UserOutlined, BankOutlined, MobileOutlined, LockOutlined } from '@ant-design/icons';
+import { CheckCircleTwoTone, SafetyCertificateTwoTone, ApiTwoTone, UserOutlined, BankOutlined, MobileOutlined, LockOutlined, ThunderboltTwoTone, SmileTwoTone } from '@ant-design/icons';
 import './App.css';
 import Navbar from './Navbar';
 
@@ -102,10 +102,9 @@ function App() {
             </Col>
           </Row>
         </section>
-        <div className="section-spacer" />
         <div className="section-bg">
           <section className="section-block">
-            <Divider id="features" orientation="left" style={{ fontSize: 32, color: '#1890ff', marginBottom: 40, fontWeight: 900 }}>Core Features</Divider>
+            <Divider id="features" orientation="center" style={{ fontSize: 32, color: '#1890ff', marginBottom: 40, fontWeight: 900 }}>Core Features</Divider>
             <Row gutter={[32, 32]}>
               {features.map((feature, idx) => (
                 <Col xs={24} sm={12} md={8} key={feature.title}>
@@ -123,10 +122,9 @@ function App() {
             </Row>
           </section>
         </div>
-        <div className="section-spacer" />
         <div className="section-bg">
           <section className="section-block">
-            <Divider orientation="left" style={{ fontSize: 32, color: '#1890ff', marginBottom: 40, fontWeight: 900 }}>Who is Luka For?</Divider>
+            <Divider orientation="center" style={{ fontSize: 32, color: '#1890ff', marginBottom: 40, fontWeight: 900 }}>Who is Luka For?</Divider>
             <Row gutter={[32, 32]}>
               {audience.map(aud => (
                 <Col xs={24} md={8} key={aud.label}>
@@ -139,45 +137,88 @@ function App() {
             </Row>
           </section>
         </div>
-        <div className="section-spacer" />
         <div className="section-bg">
           <section className="section-block">
-            <Divider orientation="left" style={{ fontSize: 32, color: '#1890ff', marginBottom: 40, fontWeight: 900 }}>Why Luka?</Divider>
-            <Row gutter={[32, 32]}>
-              <Col xs={24} md={6}><Tag color="blue">All-in-One</Tag> Banking, payments, and transfers in one place.</Col>
-              <Col xs={24} md={6}><Tag color="green">Fast & Reliable</Tag> Real-time processing and 24/7 availability.</Col>
-              <Col xs={24} md={6}><Tag color="red">Secure</Tag> Industry-leading security and compliance.</Col>
-              <Col xs={24} md={6}><Tag color="purple">User-Centric</Tag> Designed for simplicity and ease of use.</Col>
+            <Divider orientation="center" style={{ fontSize: 32, color: '#1890ff', marginBottom: 40, fontWeight: 900 }}>Why Luka?</Divider>
+            <Row gutter={[32, 32]} justify="center" style={{ justifyContent: 'center', textAlign: 'center' }}>
+              <Col xs={24} md={12} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                <div style={{ display: 'flex', alignItems: 'center', marginBottom: 24, justifyContent: 'center' }}>
+                  <CheckCircleTwoTone twoToneColor="#2f54eb" style={{ fontSize: 32, marginRight: 16 }} />
+                  <div style={{ textAlign: 'left' }}>
+                    <strong>All-in-One</strong><br />Banking, payments, and transfers in one place.
+                  </div>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', marginBottom: 24, justifyContent: 'center' }}>
+                  <ThunderboltTwoTone twoToneColor="#52c41a" style={{ fontSize: 32, marginRight: 16 }} />
+                  <div style={{ textAlign: 'left' }}>
+                    <strong>Fast & Reliable</strong><br />Real-time processing and 24/7 availability.
+                  </div>
+                </div>
+              </Col>
+              <Col xs={24} md={12} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                <div style={{ display: 'flex', alignItems: 'center', marginBottom: 24, justifyContent: 'center' }}>
+                  <SafetyCertificateTwoTone twoToneColor="#eb2f96" style={{ fontSize: 32, marginRight: 16 }} />
+                  <div style={{ textAlign: 'left' }}>
+                    <strong>Secure</strong><br />Industry-leading security and compliance.
+                  </div>
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', marginBottom: 24, justifyContent: 'center' }}>
+                  <SmileTwoTone twoToneColor="#722ed1" style={{ fontSize: 32, marginRight: 16 }} />
+                  <div style={{ textAlign: 'left' }}>
+                    <strong>User-Centric</strong><br />Designed for simplicity and ease of use.
+                  </div>
+                </div>
+              </Col>
             </Row>
           </section>
         </div>
-        <div className="section-spacer" />
         <div className="section-bg">
           <section className="section-block">
-            <Divider orientation="left" style={{ fontSize: 32, color: '#1890ff', marginBottom: 40, fontWeight: 900 }}>How to Get Started</Divider>
-            <Steps id="get-started" direction="vertical" size="small" style={{ maxWidth: 600, margin: '0 auto' }} current={3}
-              items={[
-                { title: 'Sign Up', description: 'Register with minimal hassle and start using Luka right away.' },
-                { title: 'Complete KYC', description: 'Upload documents and complete identity verification.' },
-                { title: 'Explore Features', description: 'Access wallets, payments, transfers, and more.' },
-                { title: 'Enjoy Secure Banking', description: 'Experience fast, reliable, and secure digital banking.' },
-              ]}
-            />
+            <Divider orientation="center" style={{ fontSize: 32, color: '#1890ff', marginBottom: 40, fontWeight: 900 }}>How to Get Started</Divider>
+            <div style={{ display: 'flex', justifyContent: 'center' }}>
+              <Card style={{ maxWidth: 900, width: '100%', borderRadius: 32, boxShadow: '0 4px 32px #e6f7ff', padding: 32, background: '#f8fbff', margin: '0 auto' }}>
+                <Steps
+                  id="get-started"
+                  direction="horizontal"
+                  size="default"
+                  current={3}
+                  style={{ marginBottom: 32 }}
+                  items={[
+                    {
+                      title: 'Sign Up',
+                      description: 'Register with minimal hassle and start using Luka right away.',
+                      icon: <UserOutlined style={{ color: '#1890ff' }} />,
+                    },
+                    {
+                      title: 'Complete KYC',
+                      description: 'Upload documents and complete identity verification.',
+                      icon: <SafetyCertificateTwoTone twoToneColor="#52c41a" />,
+                    },
+                    {
+                      title: 'Explore Features',
+                      description: 'Access wallets, payments, transfers, and more.',
+                      icon: <ApiTwoTone twoToneColor="#faad14" />,
+                    },
+                    {
+                      title: 'Enjoy Secure Banking',
+                      description: 'Experience fast, reliable, and secure digital banking.',
+                      icon: <LockOutlined style={{ color: '#eb2f96' }} />,
+                    },
+                  ]}
+                />
+                <div style={{ textAlign: 'center', marginTop: 24 }}>
+                  <Button type="primary" size="large" href="#" style={{ borderRadius: 16, fontWeight: 700, fontSize: 18 }}>
+                    Start Now
+                  </Button>
+                </div>
+              </Card>
+            </div>
           </section>
         </div>
-        <Divider />
-        <Row justify="center" style={{ marginTop: 32 }}>
-          <Col>
-            <Title level={4} style={{ textAlign: 'center', color: '#1890ff', fontWeight: 900 }}>
-              Ready to experience modern banking?
-            </Title>
-            <Button type="primary" size="large" href="#get-started">Get Started with Luka</Button>
-          </Col>
-        </Row>
+        <Footer style={{ textAlign: 'center', background: '#fff', marginTop: 32 }}>
+          <Text type="secondary">© {new Date().getFullYear()} Luka. All rights reserved.</Text>
+        </Footer>
       </Content>
-      <Footer style={{ textAlign: 'center', background: '#fff', marginTop: 32 }}>
-        <Text type="secondary">© {new Date().getFullYear()} Luka. All rights reserved.</Text>
-      </Footer>
     </Layout>
   );
 }
