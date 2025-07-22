@@ -1,0 +1,204 @@
+#root {
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Modern digital banking theme tweaks */
+body, #root {
+  background: linear-gradient(135deg, #e6f7ff 0%, #ffffff 100%);
+}
+
+.ant-layout {
+  background: transparent !important;
+}
+
+.ant-card {
+  border-radius: 24px !important;
+  box-shadow: 0 2px 16px #e6f7ff;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.ant-card:hover {
+  box-shadow: 0 8px 32px #1890ff22;
+  transform: translateY(-4px) scale(1.03);
+}
+
+.ant-steps {
+  background: #f0f5ff;
+  border-radius: 12px;
+  padding: 24px 16px;
+  margin-bottom: 32px;
+}
+
+@media (max-width: 768px) {
+  .ant-steps {
+    padding: 12px 0;
+  }
+  .ant-card {
+    border-radius: 12px !important;
+    min-height: 180px !important;
+  }
+}
+
+/* Hero section tweaks */
+.ant-typography h1, .ant-typography h2, .ant-typography h3, .ant-typography h4, .ant-typography h5 {
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.ant-btn-primary, .ant-btn {
+  border-radius: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px #1890ff22;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.ant-btn-primary:hover, .ant-btn:hover {
+  box-shadow: 0 4px 16px #1890ff33;
+  transform: translateY(-2px) scale(1.04);
+}
+
+/* Logo tweaks */
+img[alt="Luka Logo"] {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px #1890ff22;
+  padding: 4px;
+}
+
+/* Hero Section Styles */
+.hero-section {
+  background: linear-gradient(120deg, #e6f0ff 60%, #ffffff 100%);
+  padding: 64px 0 48px 0;
+  border-radius: 0 0 32px 32px;
+  box-shadow: 0 4px 32px #1890ff11;
+  margin-bottom: 48px;
+}
+
+/* Section Block Styles */
+.section-block {
+  background: #f8fbff;
+  border-radius: 32px;
+  padding: 56px 0 40px 0;
+  margin-bottom: 56px;
+  box-shadow: 0 4px 32px #e6f7ff;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 32px 0 24px 0;
+    border-radius: 0 0 16px 16px;
+  }
+  .section-block {
+    padding: 24px 0 16px 0;
+    border-radius: 16px;
+    margin-bottom: 32px;
+  }
+}
+
+/* Section backgrounds for separation */
+.section-bg {
+  background: linear-gradient(120deg, #f8fbff 60%, #e6f7ff 100%);
+  width: 100%;
+  min-height: 100px;
+}
+
+/* Section and Card Enhancements */
+.section-block {
+  background: transparent;
+  border-radius: 40px;
+  padding: 72px 0 56px 0;
+  margin-bottom: 72px;
+  box-shadow: none;
+  position: relative;
+}
+
+.ant-card {
+  border-radius: 32px !important;
+  box-shadow: 0 6px 32px #1890ff22;
+  transition: box-shadow 0.3s, transform 0.3s;
+  border: none;
+}
+.ant-card:hover {
+  box-shadow: 0 12px 48px #1890ff33;
+  transform: translateY(-6px) scale(1.04);
+}
+
+/* Headings */
+.ant-typography h1, .ant-typography h2, .ant-typography h3, .ant-typography h4, .ant-typography h5 {
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  margin-bottom: 32px;
+}
+
+/* Footer separation */
+.ant-layout-footer {
+  border-top: 3px solid #e6f7ff;
+  margin-top: 72px !important;
+  padding-top: 48px !important;
+  background: #fff !important;
+  border-radius: 40px 40px 0 0;
+  box-shadow: 0 -4px 32px #e6f7ff;
+  font-size: 18px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .section-block {
+    padding: 32px 0 24px 0;
+    border-radius: 20px;
+    margin-bottom: 32px;
+  }
+  .ant-card {
+    border-radius: 16px !important;
+    min-height: 180px !important;
+  }
+  .ant-layout-footer {
+    border-radius: 20px 20px 0 0;
+    padding-top: 24px !important;
+    margin-top: 24px !important;
+    font-size: 15px;
+  }
+}
+
+/* Add vertical spacing between sections */
+.section-spacer {
+  height: 48px;
+}
